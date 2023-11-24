@@ -1,0 +1,18 @@
+firstName: Hilmi
+middleName: Akbar
+lastName: Muharrom
+hobbies:
+  - Coding
+  - Read Manga
+  - Music
+
+address: 
+  street: JL industri
+  city: Bogor
+  country: Indonesia
+
+wallet:
+  - type: cash
+    ammount: 100000
+  - type: debit
+    ammount: 20000000
