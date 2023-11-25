@@ -10,4 +10,8 @@ docker compose stop # to stop container
 
 # show only created with docker-compose
 docker compose ps
+
+docker compose down # for removing all container
+
+docker compose ls # to show current proses config file
 ```
