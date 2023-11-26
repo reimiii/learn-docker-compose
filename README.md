@@ -25,4 +25,14 @@ docker container stats
 # for build Dockerfile using compose command
 
 docker compose build
+
+
+# for diffrent name use
+
+docker compose -f filename.yaml create
+
+# for merge dry
+
+docker compose -f docker-compose.yaml -f prod.yaml create
+
 ```
