@@ -17,4 +17,7 @@ docker compose ls # to show current proses config file
 
 # for realtime monitoring event
 docker events --filter 'container=name'
+
+# stats resource limit
+docker container stats
 ```
