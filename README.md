@@ -20,4 +20,9 @@ docker events --filter 'container=name'
 
 # stats resource limit
 docker container stats
+
+
+# for build Dockerfile using compose command
+
+docker compose build
 ```
