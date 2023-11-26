@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  mongodb-example:
+    image: mongo:latest
+    container_name: mongodb-example
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mee
+      MONGO_INITDB_ROOT_PASSWORD: mee
+      MONGO_INITDB_DATABASE: example
+    networks:
+      - networks_example
+
+  mongodb-express-example:
+    image: mongo-express:latest
+    container_name: mongodb-express-example
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: mee
+      ME_CONFIG_BASICAUTH_PASSWORD: mee
+      ME_CONFIG_MONGODB_ADMINUSERNAME: mee
+      ME_CONFIG_MONGODB_ADMINPASSWORD: mee
+      ME_CONFIG_MONGODB_SERVER: mongodb-example
+    networks:
+      - networks_example
+    depends_on:
+      - mongodb-example
+
+networks:
+  networks_example:
+    name: networks_example
+    driver: bridge
